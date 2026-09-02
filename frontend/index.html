@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arbitrage Terminal</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><header><div><div class="eyebrow">PREDICTION MARKETS · PAPER MODE</div><h1>ARBITRAGE <span>TERMINAL</span></h1></div>
+<div class="controls"><div id="mode" class="pill amber">LOADING</div><button id="refresh">↻ REFRESH</button></div></header>
+<section class="status"><div><i id="poly-dot"></i> POLYMARKET <b id="poly-status">—</b><small id="poly-time"></small></div><div><i id="kalshi-dot"></i> KALSHI <b id="kalshi-status">—</b><small id="kalshi-time"></small></div><div class="notice">READ-ONLY DATA · LIVE TRADING DISABLED</div></section>
+<nav><button class="tab active" data-view="scanner">SCANNER</button><button class="tab" data-view="performance">PAPER PERFORMANCE</button></nav>
+<main id="scanner"><section class="metrics"><article><label>MARKETS MONITORED</label><strong id="markets">—</strong></article><article><label>MATCHED MARKETS</label><strong id="matches">—</strong></article><article><label>LIVE OPPORTUNITIES</label><strong id="opps">—</strong></article><article><label>CAPITAL DEPLOYABLE</label><strong id="capital">—</strong></article><article class="profit"><label>POTENTIAL NET PROFIT</label><strong id="profit">—</strong></article></section>
+<div class="panel"><div class="panelhead"><div><h2>EXECUTABLE OPPORTUNITIES</h2><p>Sorted by modeled net profit · depth and risk adjusted</p></div><span id="updated">—</span></div>
+<div class="tablewrap"><table><thead><tr><th>EVENT</th><th>LEG A</th><th>LEG B</th><th>NET ROI</th><th>CAPACITY</th><th>NET PROFIT</th><th>CONFIDENCE</th><th>AGE</th></tr></thead><tbody id="rows"></tbody></table></div></div></main>
+<main id="performance" hidden><section class="metrics perf"><article><label>TOTAL SIMULATIONS</label><strong id="p-total">0</strong></article><article><label>CAPITAL DEPLOYED</label><strong id="p-capital">$0</strong></article><article class="profit"><label>THEORETICAL PROFIT</label><strong id="p-profit">$0</strong></article><article><label>AVERAGE ROI</label><strong id="p-roi">0%</strong></article><article><label>FAILED HEDGES</label><strong id="p-failed">0</strong></article></section><div class="panel"><div class="panelhead"><div><h2>PAPER LEDGER</h2><p>Simulated fills only; theoretical profit is not realized profit</p></div></div><div id="ledger" class="ledger"></div></div></main>
+<dialog id="detail"><button class="close" aria-label="Close">×</button><div id="detail-body"></div></dialog><div id="toast"></div>
+<script src="/static/app.js"></script></body></html>
+
